@@ -20,9 +20,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
+@EnableAutoConfiguration
 @SpringBootApplication
-@EnableJpaRepositories(basePackages = "com.example.demo.demoRepo")
+@EnableJpaRepositories(basePackages = "com.example.demo.RestApi.demoRepo")
 public class DemoApplication {
 
 	public static void main(String[] args) {
