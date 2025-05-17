@@ -15,8 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 
 public class demoController {
-	@Autowired
-	demoRepo repo;
+	@Autowired demoRepo repo;
 	
 @GetMapping("/api/welcome")
 public String testmethod() {
@@ -37,7 +36,7 @@ public List<demoModel> getnormalList(){
 
 @GetMapping("/api/normalselectlist/{id}")
 public List<demoModel> getnormalselectList(@PathVariable("id") int id){
-	List<demoModel> getall= (List<demoModel>) repo.getById(Integer.valueOf(id));
+	List<demoModel> getall= (List<demoModel>) repo.getById((id));
 	return getall;
 }
 
@@ -51,7 +50,7 @@ public demoModel postid(@RequestBody demoModel demo) {
 @PostMapping("/api/normalputemp/{id}")
 public demoModel putvalue(@PathVariable("id") int id, @RequestBody demoModel model) {
 	
-	demoModel demo=repo.getById(Integer.valueOf(id));
+	demoModel demo=repo.getById((id));
 	demo.setMarks(model.getMarks());
 	demo.setName(model.getName());
 	
@@ -61,7 +60,7 @@ public demoModel putvalue(@PathVariable("id") int id, @RequestBody demoModel mod
 @DeleteMapping("/api/deletermp/{id}")	
 public void deletebyID(@PathVariable("id") int id) {
 	
-	repo.deleteById(Integer.valueOf(id));
+	repo.deleteById((id));
 }
 @DeleteMapping("/api/deletermp/")	
 public void deletebyID(@RequestBody demoModel demo) {
