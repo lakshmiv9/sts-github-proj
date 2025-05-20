@@ -7,7 +7,8 @@ import java.util.stream.Collectors;
 public class Arraylists {
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<>();
-        list.add("as");
+        List<String> list1 =List.of("d");
+                list.add("as");
         list.add(String.valueOf(123));
         list.add("arry");
         list.add("apple");
@@ -17,7 +18,7 @@ public class Arraylists {
         list.add("chikoo");
         list.remove(2);
         list.set(1, "list"); // pos 1 will always be list
-
+        System.out.println("plain display"+list);
         Iterator itr = list.iterator();
         //traditional way to iterate
         System.out.println("****************while loop iterate****************");
