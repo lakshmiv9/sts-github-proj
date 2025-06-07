@@ -21,10 +21,9 @@ public class executorExmpl {
             throw new RuntimeException(e);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
+        }finally{
+            // important to close the executor service
+            executorService.shutdown();
         }
-
-// important to close the executor service
-        executorService.shutdown();
-
     }
 }
