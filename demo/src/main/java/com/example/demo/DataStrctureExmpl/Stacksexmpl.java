@@ -39,6 +39,7 @@ public class Stacksexmpl {
         peek_stack(stack1);
         search_stack(stack1,1);
         search_stack(stack1, 6);
+        System.out.println("Stack1 size"+stack1.size());
 
     }
    static void push_stack(Stack<Integer> s){
