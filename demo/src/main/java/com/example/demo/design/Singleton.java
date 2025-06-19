@@ -1,4 +1,4 @@
-package com.example.demo.Core;
+package com.example.demo.design;
 
 public class Singleton {
     //private final static Singleton INSTANCE = new Singleton();//eager initialization while loading class
