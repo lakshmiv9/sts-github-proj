@@ -25,7 +25,7 @@ public class empController {
     @PostMapping(path="/postEmp")
     public ResponseEntity<demoModel> saveEmp(@RequestBody demoModel demo){
        repo.save(demo);
-        return new ResponseEntity<demoModel>(HttpStatus.CREATED);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @PutMapping(path="/putemp/{id}")
@@ -35,7 +35,19 @@ public class empController {
        d.setName(demo.getName());
        d.setMarks(demo.getMarks());
        repo.save(d);
-       return new ResponseEntity<demoModel>(HttpStatus.OK);
+       return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @DeleteMapping(path="/delete/{id}")
+    public ResponseEntity<demoModel> deletebyID(@PathVariable("id") int id){
+        repo.deleteById(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @DeleteMapping(path = "/deleteall")
+    public ResponseEntity<demoModel> delete(@RequestBody demoModel model){
+        repo.delete(model);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 }
