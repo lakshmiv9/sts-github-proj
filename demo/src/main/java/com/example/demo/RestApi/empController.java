@@ -45,9 +45,9 @@ public class empController {
     }
 
     @DeleteMapping(path = "/deleteall")
-    public ResponseEntity<demoModel> delete(@RequestBody demoModel model){
+    public ResponseEntity<String> delete(@RequestBody demoModel model){
         repo.delete(model);
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>("Deleted", HttpStatus.valueOf(200));
     }
 
 }
