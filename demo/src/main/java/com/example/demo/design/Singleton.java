@@ -1,5 +1,5 @@
 package com.example.demo.design;
-
+//creational design pattern
 public class Singleton {
     //private final static Singleton INSTANCE = new Singleton();//eager initialization while loading class
     private Singleton INSTANCE; //lazy initialization
