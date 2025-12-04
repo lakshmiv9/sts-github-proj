@@ -1,4 +1,4 @@
-package com.example.demo.Sorting;
+package com.example.demo.collections;
 
 import com.example.demo.Person;
 

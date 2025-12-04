@@ -1,5 +1,5 @@
 package com.example.demo.Core;
-
+//constructor, static & final
 public class coreSample {
 private int age;
 private final String dept="IT";

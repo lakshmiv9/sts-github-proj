@@ -1,4 +1,4 @@
-package com.example.demo.Core;
+package com.example.demo.collections;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;

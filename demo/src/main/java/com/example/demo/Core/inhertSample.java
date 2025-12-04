@@ -51,7 +51,8 @@ class subclass extends inhertSample{
         obj.showDetails();
         inhertSample obj1=new subclass("abc");
         obj1.showDetails();
-        //subclass obj3=new inhertSample("maintype"); --compilation error
+     //   inhertSample obj3=new inhertSample("maintype"); //might not be needed as we can access methods & varibales with
+        //   help of super key word why to create object
     }
 }
 
