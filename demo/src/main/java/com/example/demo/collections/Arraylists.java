@@ -1,5 +1,7 @@
 package com.example.demo.collections;
 
+import com.example.demo.Person;
+
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -7,7 +9,8 @@ import java.util.stream.Collectors;
 public class Arraylists {
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<>();
-        List<String> list1 =List.of("d");
+        List<String> list1 =List.of("d"); //Create an immutable List (Java 9+) before that its Arrays.asList(mutable)
+        List<String> list2=Arrays.asList("1");
                 list.add("as");
         list.add(String.valueOf(123));
         list.add("arry");
@@ -69,6 +72,10 @@ public class Arraylists {
         //Remove Nulls from ArrayList
         list.removeIf(Objects::isNull);
         System.out.println(list);
+
+        //grouping
+        List<Person> listg=new ArrayList<>();
+        listg.stream().collect(Collectors.groupingBy(Person::getAge));
 
 
 

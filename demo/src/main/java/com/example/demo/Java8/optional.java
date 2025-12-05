@@ -18,8 +18,10 @@ public class optional {
         opn.ifPresent(System.out::println);
 
         Optional<String> emptyName=Optional.ofNullable(str1);
+
         try {
-            String missingName = emptyName.orElseThrow(() -> new IllegalArgumentException("Name not found"));
+            emptyName.ifPresent(System.out::println);
+            emptyName.orElseThrow(() -> new IllegalArgumentException("Name not found for"));
         } catch (Exception e) {
             System.out.println("Caught exception: " + e.getMessage());
         }

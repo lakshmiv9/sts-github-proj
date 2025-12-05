@@ -28,7 +28,7 @@ public class sets {
 
         // Using TreeSet for sorting
         Set<String> sort=new TreeSet<>(s1);
-        System.out.println("Sorted"+s1);
+        System.out.println("Sorted"+s1); // eventhough we can print thos Iterator gives fine grained control
 
         Set<Integer> set1 = new HashSet<>(Arrays.asList(1, 2, 3, 4));
         Set<Integer> set2 = new HashSet<>(Arrays.asList(3, 4, 5, 6));

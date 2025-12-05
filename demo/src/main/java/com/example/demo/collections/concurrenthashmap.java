@@ -60,9 +60,18 @@ public class concurrenthashmap {
                 map.put(key,val+2);
             }
             System.out.println(map);
-        })
+        });
 
-        ;
+        //OR
+
+        for(Map.Entry<String, Integer> me:map.entrySet()){ // we need to give paramanets<String, Integer> in iteration for conurrenthashmap
+            map.put("C",4);
+            if( me.getValue()<5){
+                map.put(me.getKey(), me.getValue()+2);
+
+            }
+            System.out.println(me.getKey()+" "+me.getValue());
+        }
 
     }
 }

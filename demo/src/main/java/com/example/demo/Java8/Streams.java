@@ -13,17 +13,18 @@ public class Streams {
         List<Person> personList= Arrays.asList(new Person("anvesh",35,123,"m","Data"),
                 new Person("midhiles",36,12,"m","Network"),
                 new Person("lakshmi",35,1234,"f","IT"));
-       List<Person> newList= personList.stream().
+       //new list with >35
+        List<Person> newList= personList.stream().
                filter(age->age.getAge()>35).
                collect(Collectors.toList());
        System.out.println(newList);
         personList.stream().filter(age->age.getAge()<35).
                map(n->n.getName().toUpperCase())
                 .forEach(System.out::println);
-
+//square of num
         List<Integer> square=Arrays.asList(2,3,4,4,3,5);
         square.stream().distinct().map(i->i*i).forEach(System.out::println);
-
+//count elements in list
         List<String> emptyStr=Arrays.asList("adc","");
         long count=emptyStr.stream().filter(str->str!=null).count();
         System.out.println(count);
