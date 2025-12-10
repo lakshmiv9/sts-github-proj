@@ -26,6 +26,10 @@ public class completableFutExmpl {
                     System.out.println("Exception: " + ex.getMessage());
                     return null;
                 });
+        completableFuture.thenApplyAsync(res->{ // this is same as above no diff in meaning
+            return res.toUpperCase();
+        });
+        completableFuture.join(); // wait for completion
         try {
             TimeUnit.SECONDS.sleep(1); //Give time for async tasks to complete else main thread with exit before completing the task
         } catch (InterruptedException e) {

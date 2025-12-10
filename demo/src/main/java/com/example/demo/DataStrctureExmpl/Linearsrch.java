@@ -1,8 +1,13 @@
 package com.example.demo.DataStrctureExmpl;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.List;
+
 public class Linearsrch {
     public static void main(String args[]){
         int arr[] = {12,34,56,77,7,8,92,323,24468,67768};
+       // List<Integer> arr=Arrays.asList(12,34,56,77,7,8,92,323,24468,67768);
         int num=7;
         for(int i=0;i<arr.length;i++){
             if(arr[i]==num){

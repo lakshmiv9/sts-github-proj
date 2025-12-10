@@ -29,9 +29,9 @@ public class binaryseach {
     // Driver code
     public static void main(String args[])
     {
-        int arr[] = {12,34,56,77,7,8,92,323,24468,67768};
+        int arr[] = {12, 34, 56, 77, 92, 323, 24468, 67768};
         int n = arr.length;
-        int x = 323;
+        int x = 56;
         int result = binarySearch(arr, x);
         if (result == -1)
             System.out.println(
